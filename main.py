@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import numpy as np
 
 print(pd.__version__) #prints the version of python
 
@@ -59,13 +60,21 @@ print(df.corr())
 
 
 #Plotting
-df.plot()
-plt.show()
+# df.plot()
+# plt.show()
 
-#scatter plot
-df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
+# #scatter plot
+# df.plot(kind = 'scatter', x = 'Duration', y = 'Calories')
 
-#histogram
-df["Duration"].plot(kind = 'hist')
+# #histogram
+# df["Duration"].plot(kind = 'hist')
 
+# plt.show()
+
+
+y = np.array([61, 22, 16])
+mylabels = ["learning", "Project1", "KT_Sessions"]
+
+plt.pie(y, labels = mylabels)
+plt.legend(title = "Focus Time")
 plt.show()
